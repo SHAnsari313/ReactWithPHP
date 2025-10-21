@@ -28,7 +28,7 @@ function App() {
   const fetchAllEmployee = async () => {
     try {
       const response = await axios.get(
-        `${API_BASE_URL}/ReactWithPHP/api-getAllEmployee.php`
+        `${API_BASE_URL}/api-getAllEmployee.php`
       );
       setAllEmployees(response.data);
       // console.log("all employees", response.data);
@@ -52,7 +52,7 @@ function App() {
   const handleSearch = async () => {
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/ReactWithPHP/api-searchEmployee.php`,
+        `${API_BASE_URL}/api-searchEmployee.php`,
         searchData,
         {
           headers: {
@@ -78,7 +78,7 @@ function App() {
     if (!isEditing) {
       try {
         const response = await axios.post(
-          `${API_BASE_URL}/ReactWithPHP/api-insertEmployee.php`,
+          `${API_BASE_URL}/api-insertEmployee.php`,
           insertData,
           {
             headers: {
@@ -102,7 +102,7 @@ function App() {
     if (isEditing) {
       try {
         const response = await axios.post(
-          `${API_BASE_URL}/ReactWithPHP/api-updateEmplyee.php`,
+          `${API_BASE_URL}/api-updateEmplyee.php`,
           insertData,
           {
             headers: {
@@ -138,7 +138,7 @@ function App() {
   const handleSubmitDelete = async () => {
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/ReactWithPHP/api-deleteEmployee.php`,
+        `${API_BASE_URL}/api-deleteEmployee.php`,
         deleteData,
         {
           headers: {
